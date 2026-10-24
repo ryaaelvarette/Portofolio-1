@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <!-- Agar tampilan menyesuaikan lebar layar HP (wajib untuk Responsive Web) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arya Dwimulya | Web Profile & Portofolio</title>
+
+  <!-- Menghubungkan file CSS -->
+  <link rel="stylesheet" href="responsive-2.css">
+</head>
+<body>
+
+  <!-- =====================================================
+       1. NAVBAR (Navigasi)
+       ===================================================== -->
+  <header>
+    <div class="container nav">
+      <a href="#beranda" class="logo">Arya Dwimulya</a>
+
+      <nav class="nav-kanan">
+        <ul class="menu" id="menu">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#skills">Keahlian</a></li>
+          <li><a href="#proyek">Proyek</a></li>
+          <li><a href="#prestasi">Prestasi</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+        <button class="tombol-kecil" id="tombolTema">Gelap</button>
+        <button class="tombol-kecil tombol-menu" id="tombolMenu">Menu</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- =====================================================
+         2. HERO SECTION (Penyambutan)
+         ===================================================== -->
+    <section class="section hero" id="beranda">
+      <div class="container">
+
+        <div class="hero-teks">
+          <small>Siswa kelas X, siap PKL dan magang</small>
+          <h1>Halo, saya<br>Arya Dwimulya</h1>
+          <h2>Siswa SMK Jurusan Rekayasa Perangkat Lunak</h2>
+          <p>SMK Negeri 4 Malang. Saya suka mengubah ide menjadi karya nyata dan sedang bersiap masuk dunia kerja.</p>
+          <a href="#proyek" class="tombol isi">Lihat Proyek</a>
+          <a href="#kontak" class="tombol">Hubungi Saya</a>
+        </div>
+
+        <!-- FOTO: ganti tulisan "NS" dengan foto Anda.
+             Caranya, hapus tulisan NS lalu isi dengan:
+             <img src="foto.jpg" alt="Foto Nama Siswa">
+             (simpan foto.jpg di folder yang sama dengan file ini) -->
+        <div class="foto">
+          <img src="WALAAAWALAAAA.jpeg" alt="Foto Arya Dwimulya">
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         3. TENTANG SAYA
+         ===================================================== -->
+    <section class="section tentang" id="tentang">
+      <div class="container">
+        <h2 class="judul-section">Tentang Saya</h2>
+        <p class="sub-judul">Cerita singkat tentang sekolah, jurusan, minat, dan cita-cita saya.</p>
+
+        <div class="grid-2">
+          <div>
+            <p>Saya bersekolah di <strong>SMK Negeri 4 Malang</strong> dan mengambil jurusan <strong>Rekayasa Perangkat Lunak (RPL)</strong>. Di sekolah, kami belajar langsung lewat praktik di laboratorium komputer.</p>
+            <p>Minat terbesar saya ada di <strong>pembuatan website</strong>. Saya senang ketika coretan ide berubah menjadi halaman yang bisa dibuka orang lain.</p>
+            <p>Setelah lulus, saya ingin bekerja sebagai <strong>web developer</strong>, lalu melanjutkan kuliah sambil bekerja.</p>
+          </div>
+
+          <div class="statistik">
+            <div class="kartu"><div class="angka">3</div>Proyek selesai</div>
+            <div class="kartu"><div class="angka">8</div>Software dikuasai</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         4. KOMPETENSI & KEAHLIAN (Skills)
+         ===================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="judul-section">Kompetensi dan Keahlian</h2>
+        <p class="sub-judul">Mata pelajaran kejuruan, tools yang dikuasai, dan sertifikat.</p>
+
+        <div class="grid-3">
+
+          <!-- Kartu 1: mata pelajaran kejuruan -->
+          <div class="kartu">
+            <h3>Mapel Kejuruan</h3>
+
+            <div class="bar-judul"><span>Pemrograman Web</span><span>77%</span></div>
+            <div class="bar"><span style="width: 77%;"></span></div>
+
+            <div class="bar-judul"><span>Basis Data</span><span>77%</span></div>
+            <div class="bar"><span style="width: 77%;"></span></div>
+
+            <div class="bar-judul"><span>Pemrograman Objek</span><span>77%</span></div>
+            <div class="bar"><span style="width: 77%;"></span></div>
+
+            <div class="bar-judul"><span>Desain Grafis</span><span>77%</span></div>
+            <div class="bar"><span style="width: 77%;"></span></div>
+          </div>
+
+          <!-- Kartu 2: tools / software -->
+          <div class="kartu">
+            <h3>Tools dan Software</h3>
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>VS Code</li>
+              <li>Git</li>
+              <li>Figma</li>
+              <li>Canva</li>
+              <li>MS Office</li>
+            </ul>
+          </div>
+
+          <!-- Kartu 3: sertifikasi -->
+          <div class="kartu">
+            <h3>Sertifikasi</h3>
+            <ul class="sertifikat">
+              <li>Juara 3 Lomba Mobile Legends<small>2025</small></li>
+              <li>Best Jungler Babak Penyisihan<small>2025</small></li>
+              <li>Juara Harapan 2 Mobile Legends<small>2024</small></li>
+              <li>Top Global Julian No. 77<small>2025</small></li></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         5. PROYEK & KARYA (Portfolio)
+         ===================================================== -->
+    <section class="section tentang" id="proyek">
+      <div class="container">
+        <h2 class="judul-section">Proyek dan Karya</h2>
+        <p class="sub-judul">Klik "Lihat detail" pada kartu untuk membaca ceritanya.</p>
+
+        <div class="grid-3">
+
+          <div class="kartu proyek">
+            <div class="gambar-proyek abu1">
+              <img src="snj.png" height="100"  alt="UI UX UMKM (SNACKJOY)">
+            </div>
+            <span class="label">PJBL</span>
+            <h3>UI UX Website Snackjoy untuk UMKM</h3>
+            <p>Sistem Pemesanan Online</p>
+            <details>
+              <summary>Lihat detail</summary>
+              <p>Ada fitur pencarian, keranjang belanja, dan sistem pembayaran.</p>
+              <p><strong>Teknologi:</strong> Figma, HTML, CSS</p>
+            </details>
+          </div>
+
+          <div class="kartu proyek">
+           <div class="gambar-proyek">
+             <img src="minimarket.png" height="100" alt="Minimarket Kasir">
+          </div>
+            <span class="label">Tugas Sekolah</span>
+            <h3>Aplikasi Minimarket Kasir</h3>
+            <p>Pembelian dan Penjualan Barang</p>
+            <details>
+              <summary>Lihat detail</summary>
+              <p>Pembelian dan Penjualan Barang</p>
+              <p><strong>Teknologi:</strong> HTML, CSS, JavaScript, PHP</p>
+            </details>
+          </div>
+
+          <div class="kartu proyek">
+            <div class="gambar-proyek abu3">
+              <img src="Screenshot 2026-10-24 195921.png" height="100" alt="Deskriptif">
+            </div>
+            <span class="label">Tugas Sekolah</span>
+            <h3>Kalkulator Statistik Deskriptif</h3>
+            <p>Alat untuk menghitung statistik deskriptif.</p>
+            <details>
+              <summary>Lihat detail</summary>
+              <p>Berisi hasil analisis, visualisasi data, dan perhitungan statistik.</p>
+              <p><strong>Teknologi:</strong> HTML, CSS</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         6. PRESTASI & KEGIATAN
+         ===================================================== -->
+    <section class="section" id="prestasi">
+      <div class="container">
+        <h2 class="judul-section">Prestasi dan Kegiatan</h2>
+        <p class="sub-judul">Lomba, organisasi sekolah, dan pengalaman kepanitiaan.</p>
+
+        <div class="prestasi">
+          <div class="item">
+            <span class="tahun">2026</span>
+            <h3>Juara 3 Lomba Mobile Legends</h3>
+            <p>Mengikuti lomba Mobile Legends dan meraih juara 3.</p>
+          </div>
+
+          <div class="item">
+            <span class="tahun">2025</span>
+            <h3>Best Jungler Babak Penyisihan</h3>
+            <p>Mengikuti lomba Mobile Legends dan meraih posisi terbaik sebagai jungler.</p>
+          </div>
+
+          <div class="item">
+            <span class="tahun">2024</span>
+            <h3>Juara Harapan 2 Mobile Legends</h3>
+            <p>Mengikuti lomba Mobile Legends dan meraih juara harapan 2.</p>
+          </div>
+
+          <div class="item">
+            <span class="tahun">2025</span>
+            <h3>Top Global Julian No. 77</h3>
+            <p>Mengikuti lomba Mobile Legends dan meraih posisi terbaik sebagai jungler.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         7. KONTAK & MEDIA SOSIAL
+         ===================================================== -->
+    <section class="section tentang" id="kontak">
+      <div class="container">
+        <h2 class="judul-section">Kontak dan Media Sosial</h2>
+        <p class="sub-judul">Punya lowongan magang atau ingin berkenalan? Hubungi saya lewat:</p>
+
+        <div class="grid-2">
+
+          <!-- Tautan media sosial (ganti dengan akun Anda) -->
+          <div>
+            <a class="kontak-link" href="https://www.linkedin.com/in/arya-dwimulya-a-undefined-4017b6428/" target="_blank">LinkedIn</a>
+            <a class="kontak-link" href="https://github.com/ryaaelvarette" target="_blank">GitHub</a>
+           <a class="kontak-link" href="https://mail.google.com/mail/?view=cm&to=aryaardyono02@gmail.com" target="_blank">Mailgit</a>
+            <a class="kontak-link" href="https://wa.me/6283847944871" target="_blank">WhatsApp</a>
+          </div>
+
+          <!-- Formulir: saat dikirim akan membuka aplikasi email -->
+          <form action="mailto:aryaardyono02@gmail.com" method="post" enctype="text/plain">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama Anda" required>
+
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" placeholder="Tulis pesan Anda" required></textarea>
+
+            <button type="submit" class="tombol isi">Kirim Pesan</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Arya Dwimulya. Tugas Mandiri 8.</p>
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT (singkat, hanya 2 fitur)
+       ===================================================== -->
+  <script>
+    // Mengambil elemen dari HTML berdasarkan id
+    var tombolMenu = document.getElementById("tombolMenu");
+    var menu = document.getElementById("menu");
+    var tombolTema = document.getElementById("tombolTema");
+
+    // Fitur 1: klik tombol Menu -> menu muncul / hilang (di HP)
+    tombolMenu.onclick = function () {
+      menu.classList.toggle("buka");
+    };
+
+    // Menu menutup sendiri setelah salah satu link diklik
+    var semuaLink = document.querySelectorAll("#menu a");
+    for (var i = 0; i < semuaLink.length; i++) {
+      semuaLink[i].onclick = function () {
+        menu.classList.remove("buka");
+      };
+    }
+
+    // Fitur 2: klik tombol Gelap/Terang -> ganti tema halaman
+    tombolTema.onclick = function () {
+      document.body.classList.toggle("gelap");
+
+      if (document.body.classList.contains("gelap")) {
+        tombolTema.textContent = "Terang";
+      } else {
+        tombolTema.textContent = "Gelap";
+      }
+    };
+
+  </script>
+
+</body>
+</html>

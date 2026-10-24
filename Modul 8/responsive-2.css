@@ -1,0 +1,583 @@
+
+:root {
+  --bg: #ffffff;           /* warna latar halaman */
+  --kartu: #f4f4f4;        /* warna latar kartu */
+  --teks: #111111;         
+  --abu: #666666;          
+  --garis: #dddddd;       
+  --utama: #111111;        
+  --di-atas-utama: #ffffff;
+}
+
+/* Mode gelap: aktif saat <body> punya class "gelap" (diatur oleh JavaScript) */
+body.gelap {
+  --bg: #111111;
+  --kartu: #1d1d1d;
+  --teks: #f2f2f2;
+  --abu: #aaaaaa;
+  --garis: #333333;
+  --utama: #ffffff;
+  --di-atas-utama: #111111;
+}
+
+/* ---------- 2. Pengaturan dasar ---------- */
+* {
+  box-sizing: border-box;  /* padding tidak menambah lebar elemen */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* klik menu = halaman bergulir halus */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--teks);
+  transition: background 0.3s, color 0.3s; /* perubahan warna jadi halus */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Wadah agar isi tidak terlalu lebar dan selalu di tengah */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.judul-section {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.sub-judul {
+  color: var(--abu);
+  margin-bottom: 40px;
+}
+
+/* ---------- 3. Tombol ---------- */
+.tombol {
+  display: inline-block;
+  padding: 12px 26px;
+  border: 2px solid var(--utama);
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  background: transparent;
+  color: var(--teks);
+  font-size: 1rem;
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+
+.tombol.isi {
+  background: var(--utama);
+  color: var(--di-atas-utama);
+}
+
+/* Efek saat kursor diarahkan ke tombol */
+.tombol:hover {
+  transform: translateY(-4px);
+  background: var(--utama);
+  color: var(--di-atas-utama);
+}
+
+.tombol.isi:hover {
+  background: transparent;
+  color: var(--teks);
+
+}
+
+
+/* ---------- 4. Navbar ---------- */
+header {
+  position: sticky;   /* menempel di atas saat di-scroll */
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--garis);
+  font-family: "Times New Roman", serif;
+}
+
+.nav {
+  display: flex;                  /* logo di kiri, menu di kanan */
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.menu a {
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.menu a:hover {
+  border-bottom-color: var(--utama); /* garis bawah muncul saat hover */
+}
+
+.nav-kanan {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tombol-kecil {
+  padding: 8px 16px;
+  border: 1px solid var(--garis);
+  border-radius: 20px;
+  background: var(--kartu);
+  color: var(--teks);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tombol-kecil:hover {
+  border-color: var(--utama);
+}
+
+/* Tombol hamburger: disembunyikan di layar besar */
+.tombol-menu {
+  display: none;
+}
+
+/* ---------- 5. Hero ---------- */
+.hero .container {
+  display: flex;            /* teks di kiri, foto di kanan */
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero small {
+  display: inline-block;
+  padding: 5px 14px;
+  border: 1px solid var(--garis);
+  border-radius: 20px;
+  color: var(--abu);
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 1.3rem;
+  color: var(--abu);
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 480px;
+  margin-bottom: 25px;
+}
+
+.foto {
+  width: 280px;
+  height: 280px;
+  flex-shrink: 0;           /* ukuran foto tidak ikut mengecil */
+  border-radius: 50%;       /* bentuk lingkaran */
+  background: var(--utama);
+  color: var(--di-atas-utama);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: bold;
+  overflow: hidden;
+  transition: transform 0.4s;
+}
+
+.foto:hover {
+  transform: rotate(6deg) scale(1.05);
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* foto terpotong rapi mengisi lingkaran */
+  filter: grayscale(100%);  /* foto otomatis jadi hitam putih */
+}
+
+/* ---------- 6. Kartu (dipakai di banyak bagian) ---------- */
+.kartu {
+  background: var(--kartu);
+  border: 1px solid var(--garis);
+  border-radius: 14px;
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kartu:hover {
+  transform: translateY(-6px);                 /* kartu naik sedikit */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);  /* muncul bayangan */
+}
+
+.kartu h3 {
+  margin-bottom: 15px;
+}
+
+/* Grid: membagi area menjadi kolom yang sama lebar */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   /* 3 kolom */
+  gap: 20px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);   /* 2 kolom */
+  gap: 40px;
+}
+
+/* ---------- 7. Tentang Saya ---------- */
+.tentang p {
+  margin-bottom: 15px;
+  color: var(--abu);
+}
+
+.tentang strong {
+  color: var(--teks);
+}
+
+.statistik {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  align-content: start;
+}
+
+.statistik .kartu {
+  text-align: center;
+}
+
+.angka {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+/* ---------- 8. Skills ---------- */
+/* Bar keahlian */
+.bar-judul {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.bar {
+  height: 10px;
+  background: var(--garis);
+  border-radius: 10px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: var(--utama);
+  border-radius: 10px;
+  animation: tumbuh 1.5s;   /* bar bergerak dari 0 sampai nilai aslinya */
+}
+
+@keyframes tumbuh {
+  from { width: 0; }
+}
+
+/* Tag tools */
+.tags {
+  display: flex;
+  flex-wrap: wrap;          /* turun ke baris baru jika tidak muat */
+  gap: 10px;
+}
+
+.tags li {
+  padding: 6px 14px;
+  border: 1px solid var(--garis);
+  border-radius: 20px;
+  background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+}
+
+.tags li:hover {
+  background: var(--utama);
+  color: var(--di-atas-utama);
+}
+
+/* Daftar sertifikat */
+.sertifikat li {
+  padding: 10px 0 10px 15px;
+  border-left: 4px solid var(--utama);
+  margin-bottom: 12px;
+}
+
+.sertifikat small {
+  display: block;
+  color: var(--abu);
+}
+
+/* ---------- 9. Proyek ---------- */
+.gambar-proyek {
+  aspect-ratio: 3 / 2;        /* menggantikan height: 140px */
+  overflow: hidden;           /* baris baru */
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  transition: letter-spacing 0.3s;
+}
+.gambar-proyek img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+.kartu:hover .gambar-proyek {
+  letter-spacing: 8px;      /* huruf merenggang saat kartu di-hover */
+}
+
+/* Gradasi abu-abu berbeda tiap proyek */
+.abu1 { background: linear-gradient(135deg, #111, #555); }
+.abu2 { background: linear-gradient(135deg, #2b2b2b, #888); }
+.abu3 { background: linear-gradient(135deg, #555, #aaa); }
+
+.label {
+  font-size: 0.85rem;
+  color: var(--abu);
+}
+
+.proyek h3 {
+  margin: 5px 0 8px;
+}
+
+/* Elemen <details>: klik "Lihat detail" untuk membuka isinya */
+details {
+  margin-top: 15px;
+  border-top: 1px solid var(--garis);
+  padding-top: 12px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+summary:hover {
+  text-decoration: underline;
+}
+
+details p {
+  margin-top: 10px;
+  color: var(--abu);
+  font-size: 0.95rem;
+}
+
+/* ---------- 10. Prestasi ---------- */
+.prestasi {
+  border-left: 3px solid var(--utama);
+  padding-left: 25px;
+}
+
+.prestasi .item {
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+}
+
+.prestasi .item:hover {
+  transform: translateX(10px);   /* bergeser ke kanan saat di-hover */
+}
+
+.tahun {
+  display: inline-block;
+  padding: 2px 14px;
+  background: var(--utama);
+  color: var(--di-atas-utama);
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.prestasi p {
+  color: var(--abu);
+}
+
+/* ---------- 11. Kontak ---------- */
+.kontak-link {
+  display: block;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border: 1px solid var(--garis);
+  border-radius: 10px;
+  background: var(--kartu);
+  font-weight: bold;
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+
+.kontak-link:hover {
+  transform: translateX(8px);
+  background: var(--utama);
+  color: var(--di-atas-utama);
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--garis);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--teks);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Efek saat kolom isian diklik */
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--utama);
+}
+
+form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* ---------- 12. Footer ---------- */
+footer {
+  text-align: center;
+  padding: 25px 0;
+  color: var(--abu);
+  border-top: 1px solid var(--garis);
+}
+
+/* =========================================================
+   RESPONSIVE
+   @media = aturan CSS yang hanya berlaku pada lebar layar tertentu
+   ========================================================= */
+
+/* Tablet dan HP (lebar layar 800px ke bawah) */
+@media (max-width: 800px) {
+
+  .section {
+    padding: 60px 0;
+  }
+
+  /* Menu berubah jadi tombol hamburger */
+  .tombol-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;                 /* disembunyikan dulu */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--garis);
+    padding: 10px 5%;
+  }
+
+  .menu.buka {
+    display: flex;                 /* tampil saat class "buka" ditambahkan JavaScript */
+  }
+
+  .menu a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  /* Hero: foto di atas, teks di bawah */
+  .hero .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .foto {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  /* Grid jadi lebih sedikit kolom */
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* HP kecil (lebar layar 500px ke bawah) */
+@media (max-width: 500px) {
+
+  .grid-3 {
+    grid-template-columns: 1fr;    /* semua kartu ditumpuk 1 kolom */
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .judul-section {
+    font-size: 1.8rem;
+  }
+}
